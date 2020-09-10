@@ -3,9 +3,9 @@ const server = express()
 
 server.use(express.json())
 
-const projectsRouter = require()
-const tasksRouter = require()
-const resourcesRouter = require()
+const projectsRouter = require('../projects/projectsRouter')
+const tasksRouter = require('../tasks/tasksRouter')
+const resourcesRouter = require('../resources/resourcesRouter')
 
 server.use('/api/projects', projectsRouter)
 server.use('/api/tasks', tasksRouter)
