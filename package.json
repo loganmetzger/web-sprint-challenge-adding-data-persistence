@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/loganmetzger/web-sprint-challenge-adding-data-persistence#readme",
   "dependencies": {
+    "cleaner": "^2.0.0-alpha",
     "express": "^4.17.1",
     "knex": "^0.21.5",
     "sqlite3": "^5.0.0"
