@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Resources.find()
+  const id = req.params.id
+  Resources.findbyId(id)
     .then((resource) => {
       if (!resource) {
         res.status(404).json({ message: "file does not exist" });

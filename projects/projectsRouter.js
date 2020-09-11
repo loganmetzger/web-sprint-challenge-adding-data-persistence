@@ -4,7 +4,7 @@ const router = express.Router();
 const Projects = require("./projectsModel");
 
 router.get("/", (req, res) => {
-  Projects.find()
+  Projects.getProjects()
     .then((projects) => {
       res.status(200).json({ data: projects });
     })
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Projects.find()
+  Projects.findById()
     .then((project) => {
       if (!project) {
         res.status(404).json({ message: "file does not exist" });
@@ -29,7 +29,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const newProject = req.body;
-  Projects.add(newProject)
+  Projects.addProject(newProject)
     .then((project) => {
       res.status(201).json({ data: project });
     })

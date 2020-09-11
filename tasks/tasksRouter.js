@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Tasks.find()
+    Tasks.findbyId()
         .then(task => {
             if(!task) { 
                 res.status(404).json({ message: "file does not exist" })
