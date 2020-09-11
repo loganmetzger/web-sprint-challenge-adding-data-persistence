@@ -1,9 +1,9 @@
 exports.up = function (knex) {
   return knex.schema.createTable("project-resources", (tbl) => {
     tbl.increments();
-    tbl.integer().unsigned().notNullable().references("id").inTable("projects");
+    tbl.integer('project_id').unsigned().notNullable().references("id").inTable("projects");
     tbl
-      .integer()
+      .integer('resource_id')
       .unsigned()
       .notNullable()
       .references("id")
