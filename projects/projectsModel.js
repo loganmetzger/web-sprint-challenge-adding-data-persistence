@@ -3,9 +3,8 @@ const db = require("../data/connection");
 module.exports = {
   getProjects,
   findById,
-  getResources,
   addProject,
-  getTasks,
+
 };
 
 function getProjects() {
@@ -21,7 +20,7 @@ function findById(id) {
 //     .select("r.name as resource_name", "r.description as resource_description")
 //     .join("resources as r", "pr.resource_id", "r.id")
 //     .where("pr.project_id", id);
-}
+// }
 
 function addProject(project) {
     return db('projects')
